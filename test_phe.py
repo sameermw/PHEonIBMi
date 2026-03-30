@@ -39,15 +39,19 @@ enc_num2 = public_key.encrypt(num2)
 # 3. Homomorphic Operations (Done on ciphertext without decrypting!)
 print(f"Performing homomorphic math...")
 enc_addition = enc_num1 + enc_num2       # Encrypted + Encrypted
-enc_scalar_mult = enc_num1 * scalar      # Encrypted * Plaintext
+enc_scalar_mult1 = enc_num1 * scalar      # Encrypted * Plaintext
+enc_scalar_mult2 = enc_addition * scalar      # Encrypted sum * Plaintext
+
 
 # 4. Decrypting Results
 print("\nDecrypting results:")
 dec_addition = private_key.decrypt(enc_addition)
-dec_scalar_mult = private_key.decrypt(enc_scalar_mult)
+dec_scalar_mult1 = private_key.decrypt(enc_scalar_mult1)
+dec_scalar_mult2 = private_key.decrypt(enc_scalar_mult2)
 
 print(f"Expected Addition (50 + 75) = 125 | Decrypted = {dec_addition}")
-print(f"Expected Scalar Mult (50 * 4) = 200 | Decrypted = {dec_scalar_mult}")
+print(f"Expected Scalar Mult (50 * 4) = 200 | Decrypted = {dec_scalar_mult1}")
+print(f"Expected Scalar Mult (125 * 4) = 500 | Decrypted = {dec_scalar_mult2}")
 
-if dec_addition == 125 and dec_scalar_mult == 200:
+if dec_addition == 125 and dec_scalar_mult1 == 200 and dec_scalar_mult2 == 500:
     print("SUCCESS: 'phe' operations verified.\n")
