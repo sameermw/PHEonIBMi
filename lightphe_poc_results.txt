@@ -1,0 +1,32 @@
+============================================================
+IBM i PASE: lightphe Multi-Algorithm Trace
+============================================================
+
+[STEP 1] Initializing Paillier Cryptosystem...
+Action: lightphe is setting up the Paillier mathematical group.
+Result: Cryptosystem ready. Public/Private keys stored in memory.
+Time Taken: 0.0420 seconds.
+
+[STEP 2] Encrypting Value: 1200
+Action: lightphe converts the integer into a 'Ciphertext' object.
+Result: Ciphertext object created.
+Internal Data Type: <class 'lightphe.models.Ciphertext.Ciphertext'>
+Time Taken: 0.0252 seconds.
+
+[STEP 3] Homomorphic Addition: [Encrypted 1200] + [Encrypted 800]
+Action: lightphe's operator overloading performs the modular multiplication.
+Result: Ciphertext sum created.
+Time Taken: 0.0000 seconds.
+
+[STEP 4] Homomorphic Scalar Multiplication: [Encrypted Sum] * 5
+Action: lightphe raises the sum's ciphertext to the power of 5.
+Result: Resulting ciphertext object ready.
+Time Taken: 0.0001 seconds.
+
+[STEP 5] Decrypting Final Result...
+Action: Applying the private key to the ciphertext.
+Final Decrypted Value: 10000
+Mathematical Verification: (1200 + 800) * 5 = 10000
+Decryption Time: 0.0256 seconds.
+
+============================================================

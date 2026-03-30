@@ -1,0 +1,33 @@
+============================================================
+IBM i PASE: Homomorphic Encryption Trace (Paillier)
+============================================================
+
+[STEP 1] Generating Keypair...
+Action: System is accessing /dev/urandom to find two large primes (p and q).
+Result: Public Key 'n' generated. Length: 309 digits.
+Time Taken: 0.1077 seconds.
+
+[STEP 2] Encrypting Plaintext: 42
+Action: Computing c = (g^m * r^n) mod n^2.
+Result (Truncated): 14267404954161649896941340087419876680041290375258...68322648806695311332800433088374831262073622248543
+Observation: The number '42' is now a 617 character integer.
+Time Taken: 0.0258 seconds.
+
+[STEP 3] Performing Homomorphic Addition: [Encrypted 42] + [Encrypted 58]
+Action: Multiplying the two ciphertexts together modulo n^2.
+Note: The CPU never sees the values 42 or 58 during this step!
+Result: New ciphertext generated.
+Time Taken: 0.0000 seconds.
+
+[STEP 4] Performing Scalar Multiplication: [Encrypted Sum] * 10
+Action: Raising the ciphertext of the sum to the power of 10.
+Result: Final encrypted result ready for decryption.
+Time Taken: 0.0001 seconds.
+
+[STEP 5] Decrypting Final Result...
+Action: Using private key (factors p and q) to reverse the modular exponentiation.
+Final Decrypted Value: 1000
+Mathematical Verification: (42 + 58) * 10 = 1000
+Decryption Time: 0.0076 seconds.
+
+============================================================

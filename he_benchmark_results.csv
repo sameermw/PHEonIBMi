@@ -1,0 +1,11 @@
+Algorithm,Type,KeyGen,Encrypt,Math,Decrypt
+RSA,Mult,0.2365,0.006,0.0,0.0074
+ElGamal,Mult,0.0462,0.0026,0.0,0.0014
+Exponential-ElGamal,Add,0.0169,0.0023,0.0,0.0014
+Paillier,Add,0.1034,0.0258,0.0,0.0263
+Damgard-Jurik,Add,0.2044,0.0509,0.0001,0.0524
+Okamoto-Uchiyama,Add,0.1023,0.0228,0.0,0.0078
+Benaloh,Add,602.9229,0.0003,0.0001,0.0074
+Naccache-Stern,Add,13.7172,0.0001,0.0,0.0681
+Goldwasser-Micali,N/A,Error,-,-,Check dependencies
+EllipticCurve-ElGamal,Add,0.022,0.0429,0.0005,0.0239
