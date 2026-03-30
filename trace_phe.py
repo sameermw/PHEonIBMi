@@ -1,3 +1,19 @@
+# -----------------------------------------------------------------------------
+# © 2026 Sameera Wijayasiri | theQSECOFR.com
+#
+# This script was developed as part of a Proof of Concept (POC) for 
+# Implementing Homomorphic Encryption on IBM i Power Systems.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software to deal in the software without restriction, including 
+# without limitation the rights to use, copy, modify, merge, publish, 
+# distribute, sublicense, and/or sell copies of the software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# -----------------------------------------------------------------------------
+
 import time
 from phe import paillier
 
