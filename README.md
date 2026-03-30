@@ -13,7 +13,7 @@ This repository contains a suite of Python-based test cases for implementing **P
 ## 🚀 Test Case Catalog
 
 ### 1. The Multi-Algorithm Benchmark
-**File:** `he_performance_test.py`  
+**File:** `benchmark_script.py`  
 **Purpose:** Evaluates 10+ algorithms (RSA, Paillier, ElGamal, ECC) to find the most efficient fit for Power Systems.  
 **Key Findings:** * **Exponential-ElGamal** is the fastest for encryption on IBM i.
 * **Benaloh** is unsuitable due to extreme Key Generation latency (>600s).
@@ -31,7 +31,7 @@ This repository contains a suite of Python-based test cases for implementing **P
 **Key Findings:** * Ciphertexts can be stored as `BLOB` data in Db2 or as `.dat` files in the IFS using Python’s `pickle` module.
 
 ### 4. Advanced Math & Precision Scaling
-**File:** `elgamal_precision_test.py`  
+**File:** `advanced_elgamal_math.py`  
 **Purpose:** Investigates linear equations $(Price \times Qty \times Tax) - Discount$ and identifies the "Off-by-One" precision error.  
 **Key Findings:** * **Method 1 (Tax Factor):** Revealed a $+1$ integer drift due to numerical noise in high-exponent modular math.
 * **Method 2 (Basis Points):** Proved that **Integer Scaling** (e.g., multiplying by 100 to handle decimals) eliminates drift and ensures 100% financial accuracy.
@@ -61,11 +61,11 @@ Because PHE works primarily with integers, all financial calculations must be "s
     ```
 2.  **Install Dependencies:**
     ```bash
-    pip install lightphe phe tabulate
+    pip install lightphe phe lightphe tabulate
     ```
 3.  **Execute a Test:**
     ```bash
-    python3 elgamal_precision_test.py
+    python3 advanced_elgamal_math.py.py
     ```
 
 ---
