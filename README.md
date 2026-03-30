@@ -106,8 +106,8 @@ Because PHE works primarily with integers, all financial calculations must be "s
     ```
 3.  **Execute a Test:**
     ```bash
-    python3 <script_name.py>
-    ex:
+    #python3 <script_name.py>
+    #ex:
     python3 advanced_elgamal_math.py.py
     ```
 
